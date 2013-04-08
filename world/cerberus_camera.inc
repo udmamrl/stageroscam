@@ -86,7 +86,9 @@ define cerberus_base position
     pose [0 0 1.2 0]
     #pose [0 0 0.5 0]
     # Stingray F080C
-    resolution [ 1024 768 ]
+    #resolution [ 1024 768 ]
+    # max resolution stage can offer 745x418
+    resolution [ 745 418 ]
     range [ 0.2 16.0 ]
     # FOV from camera specs for 1/3" sensor
     # http://www.theiatech.com/prodspecs.php?lens=MY110
