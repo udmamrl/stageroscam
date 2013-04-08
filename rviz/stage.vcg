@@ -1,0 +1,79 @@
+Background\ ColorB=0
+Background\ ColorG=0
+Background\ ColorR=0
+Camera\ Config=-28.7015 0.0334784 30 -4.51958
+Camera\ Type=rviz::FixedOrientationOrthoViewController
+Fixed\ Frame=/odom
+Grid.Alpha=0.5
+Grid.Cell\ Size=1
+Grid.ColorB=0.5
+Grid.ColorG=0.5
+Grid.ColorR=0.5
+Grid.Enabled=1
+Grid.Line\ Style=0
+Grid.Line\ Width=0.03
+Grid.Normal\ Cell\ Count=0
+Grid.OffsetX=0
+Grid.OffsetY=0
+Grid.OffsetZ=0
+Grid.Plane=0
+Grid.Plane\ Cell\ Count=50
+Image.Enabled=1
+Image.Image\ Topic=/image
+Image.Queue\ Size=2
+Image.Transport\ Hint=raw
+Laser\ Scan.Alpha=1
+Laser\ Scan.Autocompute\ Intensity\ Bounds=0
+Laser\ Scan.Billboard\ Size=0.05
+Laser\ Scan.Channel=0
+Laser\ Scan.Decay\ Time=60
+Laser\ Scan.Enabled=1
+Laser\ Scan.Max\ ColorB=0.101961
+Laser\ Scan.Max\ ColorG=0.960784
+Laser\ Scan.Max\ ColorR=0.219608
+Laser\ Scan.Max\ Intensity=0
+Laser\ Scan.Min\ ColorB=0.0941176
+Laser\ Scan.Min\ ColorG=0.419608
+Laser\ Scan.Min\ ColorR=0.247059
+Laser\ Scan.Min\ Intensity=0
+Laser\ Scan.Selectable=1
+Laser\ Scan.Style=1
+Laser\ Scan.Topic=/base_scan
+Property\ Grid\ Splitter=140,78
+Property\ Grid\ State=expanded=Image.Enabled;splitterratio=0.5
+QMainWindow=000000ff00000000fd00000003000000000000011d0000020bfc0200000002fb000000100044006900730070006c006100790073010000001d0000012c000000ee00fffffffb0000000a0049006d006100670065010000014f000000d90000001900ffffff00000001000001310000020bfc0200000003fb0000001e0054006f006f006c002000500072006f0070006500720074006900650073010000001d000000b80000006700fffffffc000000db0000014d000000d90100001dfa000000000100000002fb0000000c00540065006c0065006f00700100000000ffffffff000000ad00fffffffb0000000a00560069006500770073010000031f000001310000013100fffffffb0000001200530065006c0065006300740069006f006e00000001a2000000860000006700ffffff00000003000004500000003efc0100000001fb0000000800540069006d0065010000000000000450000002bf00ffffff000001f60000020b00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+Target\ Frame=/odom
+Tool\ 2D\ Nav\ GoalTopic=/move_base_simple/goal
+Tool\ 2D\ Pose\ EstimateTopic=initialpose
+Transforms.All\ Enabled=1
+Transforms.Enabled=1
+Transforms.Show\ Arrows=0
+Transforms.Show\ Axes=1
+Transforms.Show\ Names=1
+Transforms.Update\ Rate=1
+[Display0]
+ClassName=
+Name=Grid
+[Display1]
+ClassName=
+Name=Transforms
+[Display2]
+ClassName=
+Name=Laser Scan
+[Display3]
+ClassName=rviz::ImageDisplay
+Name=Image
+[Panel0]
+ClassLookupName=rviz_plugin_tutorials/Teleop
+Name=Teleop
+Topic=/cmd_vel
+[Transforms.]
+base_footprintEnabled=1
+base_laser_linkEnabled=1
+base_linkEnabled=1
+odomEnabled=1
+[Window]
+Height=656
+Width=1120
+X=41
+Y=-6
