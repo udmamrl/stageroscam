@@ -119,7 +119,7 @@ waypoint2m ( pose [-9.000  11.000 0.000 0.000 ] )
 waypoint2m ( pose [ 0.000 11.000 0.000 0.000 ])
 waypoint2m ( pose [ 0.000  0.000  0.000 0.000 ])
 
-
+myblock( pose [ 34 2 0 0])
 
 barrel( pose [ 1.000  1.000  0.000 0.000 ])
 barrel( pose [ 33.500  1.000  0.000 0.000 ])

@@ -18,8 +18,8 @@ define sicklaser270 ranger
 
   # generic model properties
   color "blue"
-  size [ 0.15 0.15 0.25 ]
-  myblock ( pose [0 0 0 0] size [ .15 .15 .25] color "blue" )
+  size [ 0.10 0.10 0.10 ]
+  myblock ( pose [0 0 0 0] size [ .1 .1 .1] color "blue" )
 )
 
 define wheel model
@@ -70,7 +70,7 @@ define cerberus_base position
   wheel ( pose [ .0  .365 -0.46 0] )
 
   # Draw GPS (Center of rotation)
-  myblock ( pose [0 0 0 0] size [ .12 .12 .12] color "white" gui_outline 0)
+  # myblock ( pose [0 0 0 0] size [ .12 .12 .12] color "white" gui_outline 0)
 
 
   # Camera/blobfinder
@@ -103,7 +103,7 @@ define cerberus_base position
     watts 100.0 # TODO find watts for sony pan-tilt camera
  )
   # Draw LADAR
-  sicklaser270 ( pose [ 0.7 0 -0.5 0] )
+  sicklaser270 ( pose [ 0.7 0 -0.1 0] )
 
   # differential steering model
   drive "diff"
