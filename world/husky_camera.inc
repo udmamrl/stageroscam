@@ -44,11 +44,11 @@ sensor(
   # generic model properties
 )
 
-define husky_laser model
+define husky_laser husky_sicklaser270
 (
   color "grey50"
   size [ 0.10 0.10 0.1 ]
-husky_sicklaser270 (pose [0 0 0 0])
+#husky_sicklaser270 (pose [0 0 0 0])
 )
 
 define husky_camera camera
@@ -85,6 +85,12 @@ define husky_dgps model
 (
 size [ .06 .06 .02] 
 color "white" 
+)
+
+define husky_lidar model
+(
+size [ .1 .1 .02] 
+color "grey50" 
 )
 
 define husky_post model
@@ -126,7 +132,8 @@ define husky_base position
   husky_post_top(pose [  0  0 1.7 0] )
 husky_camera(pose [  0  0 1.65 0] )
   # Draw LADAR
-  husky_laser ( pose [ 0.45 0 0.4 0] )
+  husky_lidar ( pose [ 0.45 0 0.4 0] ) # dummy lidar for display
+  husky_laser ( pose [ 0.45 0 0.15 0] ) # not showing on stage camera
 
   # differential steering model
   drive "diff"
