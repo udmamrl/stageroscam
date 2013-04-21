@@ -5,7 +5,7 @@ include "cerberus_camera.inc"
 
 define myblock model
 (
-  size [0.5 0.5 0.5]
+  size [0.500 0.500 0.500]
   gui_nose 0
 )
 
@@ -63,10 +63,10 @@ interval_sim 100  # simulation timestep in milliseconds
 
 window
 ( 
-  size [ 745 448 ] 
+  size [ 1615 1026 ] 
 
   rotate [ 0.000 0.000 ]
-  scale 42.175 
+  scale 90.406 
 )
 floorplan
 (
@@ -119,7 +119,7 @@ waypoint2m ( pose [-9.000  11.000 0.000 0.000 ] )
 waypoint2m ( pose [ 0.000 11.000 0.000 0.000 ])
 waypoint2m ( pose [ 0.000  0.000  0.000 0.000 ])
 
-myblock( pose [ 34 2 0 0])
+myblock( pose [ 34.000 2.000 0.000 0.000])
 
 barrel( pose [ 1.000  1.000  0.000 0.000 ])
 barrel( pose [ 33.500  1.000  0.000 0.000 ])
