@@ -83,7 +83,7 @@ color "yellow"
 )
 define husky_dgps model
 (
-size [ .12 .06 .02] 
+size [ .06 .06 .02] 
 color "white" 
 )
 
@@ -126,7 +126,7 @@ define husky_base position
   husky_post_top(pose [  0  0 1.7 0] )
 husky_camera(pose [  0  0 1.65 0] )
   # Draw LADAR
-  husky_laser ( pose [ 0.45 0 0.45 0] )
+  husky_laser ( pose [ 0.45 0 0.4 0] )
 
   # differential steering model
   drive "diff"
