@@ -1,0 +1,11 @@
+<launch>
+  <param name="/use_sim_time" value="true"/>
+  <node pkg="stageroscam" type="stageroscam" name="IGVC_stage" args="$(find stageroscam)/world/IGVC2013_JAUS.world" output="screen">
+  </node>
+  <node pkg="rviz" type="rviz" name="rviz_stage" args="-d $(find stageroscam)/rviz/stage_JAUS.vcg" output="screen">
+
+  </node>
+  <node pkg="JAUS_move_base_simple" type="JAUS_move_base_simple.py" name="move_base"  output="screen">
+
+  </node>
+ </launch>
