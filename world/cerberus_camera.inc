@@ -1,8 +1,8 @@
-
 # Desc: Device definitions for UDM's Cerberus
 # Author: Kevin Barry
 # Date: 29 Apr 2007
 # Updated: 23 April 2010 by Alex Szmatula
+# Updated to Stage 4 formate: April 2013 by Checg-Lung Lee
 
 # cerberus uses the 270 ladar
 #include "sick.inc"
@@ -114,18 +114,26 @@ define cerberus_base position
 
 define cerberus cerberus_base
 (  
-    # Body shape:
-  block( 
-#    points 8
-#    point[0] [-0.2 0.12]
-#    point[1] [-0.2 -0.12]
-#    point[2] [-0.12 -0.2555]
-#    point[3] [0.12 -0.2555]
-#    point[4] [0.2 -0.12]
-#    point[5] [0.2 0.12]
-#    point[6] [0.12 0.2555]
-#    point[7] [-0.12 0.2555]
-#    z [0 1.22]
+#  block(	
+#  # this polygon approximates the shape of a cerberus
+#  points 6
+#  #     ___.
+#  #    /   |
+#  #   |    |
+#  #    \___|
+#
+#  # Coordinates start at bottom left and move ccw
+#  point[0] [  -0.1524  0.310  ]  # East bar by wheel
+#  point[1] [   0.1524  0.310  ]  # Northern point
+#  point[2] [   0.8076  0.120  ]  # North of west point
+#  point[3] [   0.8076 -0.120  ]  # South of west point
+#  point[4] [   0.1524 -0.310  ]  # Southern Point
+#  point[5] [  -0.1524 -0.310  ]  # South east point
+#  z [0.12 0.46]
+#  )
+#
+# Body shape: must center at 0,0 , this is after the shift in x sirection
+    block( 
     points 6
     point[0] [  -0.48    0.310  ]  # East bar by wheel
     point[1] [  -0.1752  0.310  ]  # Northern point
