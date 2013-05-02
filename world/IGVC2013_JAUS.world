@@ -14,7 +14,7 @@ husky_base
 (		  
   # can refer to the robot by this name
   name "Robot"
-  pose [ 4.5 -5.5 0.000 180.0 ] 
+  pose [ 4.500 -5.500 0.000 180.000 ] 
   localization "gps"
   localization_origin [ 0 0 0 0 ]
 )
@@ -63,10 +63,10 @@ interval_sim 100  # simulation timestep in milliseconds
 
 window
 ( 
-  size [ 745 448 ] 
+  size [ 632 598 ] 
 
   rotate [ 0.000 0.000 ]
-  scale 19.675 
+  scale 28.806 
 )
 floorplan
 (
@@ -83,8 +83,8 @@ floorplan
 floorplan
 ( 
   name "igvc"
-  size [ 20.00 20.00 0.002 ]
-  pose [ 0.100 0.100 0.000 0.000]
+  size [ 18.000 18.000 0.002 ]
+  pose [ 0.000 0.000 0.000 0.000]
   bitmap "bitmaps/igvc_jaus.png"
   gui_outline 0
   obstacle_return 0
@@ -94,9 +94,9 @@ floorplan
 
 
 ## IGVC 2012 Waypoint total distance 40M ,9x11 meter driving path
-waypoint2m ( pose [-4.5000   -5.500  0.000 0.000 ]  )
-waypoint2m ( pose [-4.5000    5.500  0.000 0.000 ] )
-waypoint2m ( pose [ 4.5000    5.500  0.000 0.000 ])
-waypoint2m ( pose [ 4.5000   -5.500  0.000 0.000 ])
+waypoint2m ( pose [-4.500   -5.500  0.000 0.000 ]  )
+waypoint2m ( pose [-4.500    5.500  0.000 0.000 ] )
+waypoint2m ( pose [ 4.500    5.500  0.000 0.000 ])
+waypoint2m ( pose [ 4.500   -5.500  0.000 0.000 ])
 
 
