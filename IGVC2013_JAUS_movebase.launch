@@ -5,7 +5,7 @@
   <node pkg="rviz" type="rviz" name="rviz_stage" args="-d $(find stageroscam)/rviz/stage_JAUS.vcg" output="screen">
 
   </node>
-  <node pkg="JAUS_move_base_simple" type="JAUS_move_base_simple.py" name="move_base"  output="screen">
 
-  </node>
+  <include file="$(find JAUS_move_base_simple)/JAUS_move_base.launch" />
+
  </launch>
