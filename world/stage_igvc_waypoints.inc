@@ -19,6 +19,24 @@ define waypoint2m model
 
 )
 
+define waypoint2m_movable model
+(
+   size [1.41 1.41 0.001]  # 2 meter diameter base
+   circle ( pose [ 0 0 0 0] size [2    2    0.01]  color "yellow" obstacle_return 0)
+   circle ( pose [ 0 0 0 0] size [0.25 0.25 0.011] color "white" obstacle_return 0)
+   circle ( pose [ 0 0 0 0] size [0.05 0.05 0.012] color "orange" obstacle_return 0)
+   #myblock ( pose [ 0 0 .01 0] size [0.25 0.25 .011] color "white" obstacle_return 0 )
+   #myblock ( pose [ 0 0 .02 0] size [0.05 0.05 .012] color "orange" obstacle_return 0 )
+
+   gripper_return 0
+   obstacle_return 0 # set to 0 so waypoint is not an obstacle. can't be hit
+   ranger_return 0   # set to 0 for no reflects sonar/laser beams
+   gui_outline 0
+   gui_move 1 # set it to 0 , we don't want waypoint to be moved
+   gui_nose 0
+   fiducial_return 1
+
+)
 define waypoint1m model
 (
    size [0.7 0.7 0.001]  # 2 meter diameter base
@@ -33,6 +51,24 @@ define waypoint1m model
    ranger_return 0   # set to 0 for no reflects sonar/laser beams
    gui_outline 0
    gui_move 0 # set it to 0 , we don't want waypoint to be moved
+   gui_nose 0
+   fiducial_return 1
+
+)
+define waypoint1m_movable model
+(
+   size [0.7 0.7 0.001]  # 2 meter diameter base
+   circle ( pose [ 0 0 0 0] size [1    1    0.01]  color "yellow" obstacle_return 0)
+   circle ( pose [ 0 0 0 0] size [0.25 0.25 0.011] color "white" obstacle_return 0)
+   circle ( pose [ 0 0 0 0] size [0.05 0.05 0.012] color "orange" obstacle_return 0)
+   #myblock ( pose [ 0 0 .01 0] size [0.25 0.25 .011] color "white" obstacle_return 0 )
+   #myblock ( pose [ 0 0 .02 0] size [0.05 0.05 .012] color "orange" obstacle_return 0 )
+
+   gripper_return 0
+   obstacle_return 0 # set to 0 so waypoint is not an obstacle. can't be hit
+   ranger_return 0   # set to 0 for no reflects sonar/laser beams
+   gui_outline 0
+   gui_move 1 # set it to 0 , we don't want waypoint to be moved
    gui_nose 0
    fiducial_return 1
 
@@ -124,7 +160,7 @@ define flag_red model
 
    gripper_return 1
    obstacle_return 0 # flag is not an obstacle
-   ranger_return 1   # reflects sonar beams
+   ranger_return 0   # reflects sonar beams
 
   gui_move 1
   gui_nose 0
@@ -141,7 +177,7 @@ define flag_blue model
 
    gripper_return 1
    obstacle_return 0 # flag is not an obstacle
-   ranger_return 1   # reflects sonar beams
+   ranger_return 0   # reflects sonar beams
 
   gui_move 1
   gui_nose 0

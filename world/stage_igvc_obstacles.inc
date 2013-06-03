@@ -429,7 +429,77 @@ define Barricade_Type2 model
     fiducial_return 0
 )
 
+define Fance2m model
+(
+	size [0.2 1 0.001]
+	myblock (size [.1 2 1] pose [0 0 0 0] color "gray")
+	
+	gripper_return 0
+    obstacle_return 1 # flag is not an obstacle
+    ranger_return 1   # reflects sonar beams
+    gui_move 1
+    gui_nose 0
+    fiducial_return 0
+)
+define Fance3m model
+(
+	size [0.2 1 0.001]
+	myblock (size [.1 3 1] pose [0 0 0 0] color "RosyBrown")
+	
+	gripper_return 0
+    obstacle_return 1 # flag is not an obstacle
+    ranger_return 1   # reflects sonar beams
+    gui_move 1
+    gui_nose 0
+    fiducial_return 0
+)
 
-
-
+define Fance5m model
+(
+	size [0.2 1 0.001]
+	myblock (size [.1 5 1] pose [0 0 0 0] color "RosyBrown")
+	
+	gripper_return 0
+    obstacle_return 1 # flag is not an obstacle
+    ranger_return 1   # reflects sonar beams
+    gui_move 1
+    gui_nose 0
+    fiducial_return 0
+)
+define Fance10m model
+(
+	size [0.2 10 0.001]
+	myblock (size [.1 10 1] pose [0 0 0 0] color "RosyBrown")
+	
+	gripper_return 0
+    obstacle_return 1 # flag is not an obstacle
+    ranger_return 1   # reflects sonar beams
+    gui_move 1
+    gui_nose 0
+    fiducial_return 0
+)
+define Fance15m model
+(
+	size [0.2 10 0.001]
+	myblock (size [.1 15 1] pose [0 0 0 0] color "RosyBrown")
+	
+	gripper_return 0
+    obstacle_return 1 # flag is not an obstacle
+    ranger_return 1   # reflects sonar beams
+    gui_move 1
+    gui_nose 0
+    fiducial_return 0
+)
+define Fance20m model
+(
+	size [0.2 10 0.001]
+	myblock (size [.1 20 1] pose [0 0 0 0] color "RosyBrown")
+	
+	gripper_return 0
+    obstacle_return 1 # flag is not an obstacle
+    ranger_return 1   # reflects sonar beams
+    gui_move 1
+    gui_nose 0
+    fiducial_return 0
+)
 
