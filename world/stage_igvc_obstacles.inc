@@ -432,7 +432,7 @@ define Barricade_Type2 model
 define Fance2m model
 (
 	size [0.2 1 0.001]
-	myblock (size [.1 2 1] pose [0 0 0 0] color "gray")
+	myblock (size [.4 2 1] pose [0 0 0 0] color "gray")
 	
 	gripper_return 0
     obstacle_return 1 # flag is not an obstacle
@@ -444,7 +444,7 @@ define Fance2m model
 define Fance3m model
 (
 	size [0.2 1 0.001]
-	myblock (size [.1 3 1] pose [0 0 0 0] color "RosyBrown")
+	myblock (size [.2 3 1] pose [0 0 0 0] color "RosyBrown")
 	
 	gripper_return 0
     obstacle_return 1 # flag is not an obstacle
@@ -457,7 +457,7 @@ define Fance3m model
 define Fance5m model
 (
 	size [0.2 1 0.001]
-	myblock (size [.1 5 1] pose [0 0 0 0] color "RosyBrown")
+	myblock (size [.2 5 1] pose [0 0 0 0] color "RosyBrown")
 	
 	gripper_return 0
     obstacle_return 1 # flag is not an obstacle
@@ -468,8 +468,8 @@ define Fance5m model
 )
 define Fance10m model
 (
-	size [0.2 10 0.001]
-	myblock (size [.1 10 1] pose [0 0 0 0] color "RosyBrown")
+	size [0.2 5 0.001]
+	myblock (size [.2 10 1] pose [0 0 0 0] color "RosyBrown")
 	
 	gripper_return 0
     obstacle_return 1 # flag is not an obstacle
@@ -481,7 +481,7 @@ define Fance10m model
 define Fance15m model
 (
 	size [0.2 10 0.001]
-	myblock (size [.1 15 1] pose [0 0 0 0] color "RosyBrown")
+	myblock (size [.2 15 1] pose [0 0 0 0] color "RosyBrown")
 	
 	gripper_return 0
     obstacle_return 1 # flag is not an obstacle
@@ -493,7 +493,7 @@ define Fance15m model
 define Fance20m model
 (
 	size [0.2 10 0.001]
-	myblock (size [.1 20 1] pose [0 0 0 0] color "RosyBrown")
+	myblock (size [.2 20 1] pose [0 0 0 0] color "RosyBrown")
 	
 	gripper_return 0
     obstacle_return 1 # flag is not an obstacle
