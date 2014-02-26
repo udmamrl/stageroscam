@@ -1,35 +1,53 @@
-cmake_minimum_required(VERSION 2.4.6)
-include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
-include(FindPkgConfig)
-rosbuild_init()
+cmake_minimum_required(VERSION 2.8.3)
+project(stageroscamcam)
 
-rosbuild_make_distribution(1.6.6)
-rosbuild_add_boost_directories()
+find_package(catkin REQUIRED COMPONENTS geometry_msgs nav_msgs roscpp rostest sensor_msgs std_msgs tf)
 
-# Build Stage
-execute_process(COMMAND cmake -E chdir ${PROJECT_SOURCE_DIR} make -f Makefile.stage
-                RESULT_VARIABLE _make_failed)
-if(_make_failed)
-  message(FATAL_ERROR "Build of Stage failed")
-endif(_make_failed)
+find_package(Boost REQUIRED COMPONENTS system thread)
 
-# Find the build flags for Stage
-set(ENV{PKG_CONFIG_PATH} "${PROJECT_SOURCE_DIR}/lib64/pkgconfig:${PROJECT_SOURCE_DIR}/lib/pkgconfig:$ENV{PKG_CONFIG_PATH}")
-pkg_check_modules(STAGE REQUIRED stage)
+#find_package(FLTK REQUIRED)
 
-# Adding explicit stage include and link directories since pkgconfig may not be correct
-# when building for a deb install.
-include_directories(${STAGE_INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/include/Stage-4.1)
-link_directories(${STAGE_LIBRARY_DIRS} ${PROJECT_SOURCE_DIR}/lib ${PROJECT_SOURCE_DIR}/lib64)
+#set(Stage_DIR cmake)
+#find_package(stage_ros REQUIRED)
 
-rosbuild_add_executable(bin/stageroscam src/stageros.cpp)
+#include_directories(
+#  ${catkin_INCLUDE_DIRS}
+#  ${Boost_INCLUDE_DIRS}
+#  ${FLTK_INCLUDE_DIRS}
+#  ${Stage_INCLUDE_DIRS}
+#)
 
-rosbuild_link_boost(bin/stageroscam thread)
-add_dependencies(bin/stageroscam build_stage)
+#catkin_package(
+#  INCLUDE_DIRS ${Stage_INCLUDE_DIRS}
+#  LIBRARIES stageroscamcam ${Stage_LIBRARIES}
+#  CATKIN_DEPENDS geometry_msgs nav_msgs roscpp sensor_msgs std_msgs tf
+#  DEPENDS Boost
+#)
 
-rosbuild_add_compile_flags(bin/stageroscam ${STAGE_CFLAGS_OTHERS})
-target_link_libraries(bin/stageroscam ${STAGE_LIBRARIES})
-rosbuild_add_link_flags(bin/stageroscam ${STAGE_LDFLAGS_OTHERS})
+# Declare a cpp executable
+#add_executable(stageroscam src/stageroscam.cpp)
+#target_link_libraries(stageroscam ${catkin_LIBRARIES} ${Boost_LIBRARIES} ${FLTK_LIBRARIES} ${Stage_LIBRARIES})
+#if(catkin_EXPORTED_TARGETS)
+#	add_dependencies(stageroscam ${catkin_EXPORTED_TARGETS})
+#endif()
 
+## Install
 
-rosbuild_add_rostest(test/hztest.xml)
+#install(PROGRAMS scripts/upgrade-world.sh
+#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+#install(TARGETS stageroscam
+#  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
+
+#install(DIRECTORY rviz
+#  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+
+#install(DIRECTORY world
+#  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+
+## Tests
+
+#add_rostest(test/hztest.xml)
