@@ -8,6 +8,7 @@ Stage_ros on Hydro currently support camera
 Tested on ROS Hydro
 
 Install without wstool
+
         cd ~/catkin_ws/src
 
         git clone https://github.com/udmamrl/stageroscam.git
